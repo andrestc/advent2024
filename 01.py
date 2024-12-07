@@ -1,10 +1,8 @@
 import os
 from collections import defaultdict
-print("oi") 
 
 
-n1 = []
-n2 = []
+n1, n2 = [], []
 n2dict = defaultdict(int) 
 with open("01.input", 'r') as f:
     while True:
@@ -17,10 +15,8 @@ with open("01.input", 'r') as f:
         n2dict[int(parts[1])]+=1
 
 
-n1=sorted(n1)
-n2=sorted(n2)
-d=0
-d2=0
+n1,n2 = sorted(n1), sorted(n2)
+d, d2 = 0, 0
 for j, i in zip(n1, n2):
     d+=abs(j-i)
     d2+=j*n2dict.get(j,0) 
